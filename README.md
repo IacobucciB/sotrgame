@@ -1,2 +1,2 @@
-# sotrgame
+# SOTRGAME
 SOTR GAME REPOSITORY
