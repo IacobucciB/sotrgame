@@ -22,15 +22,15 @@ func _physics_process(delta):
 	
 	
 	if velocity.x > 0:
-		$spriteplayer.animation = "right"
+		$PlayerSprite.animation = "Right"
 	elif velocity.x < 0:
-		$spriteplayer.animation = "left"
+		$PlayerSprite.animation = "Left"
 	elif velocity.y > 0:
-		$spriteplayer.animation = "down"
+		$PlayerSprite.animation = "Down"
 	elif velocity.y < 0:
-		$spriteplayer.animation = "up"
+		$PlayerSprite.animation = "Up"
 	else:
-		$spriteplayer.animation = "iddle"
+		$PlayerSprite.animation = "Iddle"
 
 
 	
