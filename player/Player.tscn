@@ -141,6 +141,7 @@ script = ExtResource( 1 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 22 )
 animation = "Down"
+frame = 4
 playing = true
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
