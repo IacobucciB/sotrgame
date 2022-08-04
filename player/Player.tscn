@@ -3,25 +3,25 @@
 [ext_resource path="res://player/Player.gd" type="Script" id=1]
 [ext_resource path="res://player/PlayerSprite.png" type="Texture" id=2]
 
-[sub_resource type="AtlasTexture" id=1]
+[sub_resource type="AtlasTexture" id=18]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 84, 39, 21, 39 )
+region = Rect2( 0, 39, 21, 39 )
 
-[sub_resource type="AtlasTexture" id=2]
+[sub_resource type="AtlasTexture" id=19]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 105, 39, 21, 39 )
+region = Rect2( 21, 39, 21, 39 )
 
-[sub_resource type="AtlasTexture" id=3]
+[sub_resource type="AtlasTexture" id=20]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 126, 39, 21, 39 )
+region = Rect2( 42, 39, 21, 39 )
 
-[sub_resource type="AtlasTexture" id=4]
+[sub_resource type="AtlasTexture" id=21]
 flags = 4
 atlas = ExtResource( 2 )
-region = Rect2( 147, 39, 21, 39 )
+region = Rect2( 63, 39, 21, 39 )
 
 [sub_resource type="AtlasTexture" id=5]
 flags = 4
@@ -47,6 +47,26 @@ region = Rect2( 66, 78, 22, 39 )
 flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 88, 78, 22, 39 )
+
+[sub_resource type="AtlasTexture" id=1]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 84, 39, 21, 39 )
+
+[sub_resource type="AtlasTexture" id=2]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 105, 39, 21, 39 )
+
+[sub_resource type="AtlasTexture" id=3]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 126, 39, 21, 39 )
+
+[sub_resource type="AtlasTexture" id=4]
+flags = 4
+atlas = ExtResource( 2 )
+region = Rect2( 147, 39, 21, 39 )
 
 [sub_resource type="AtlasTexture" id=10]
 flags = 4
@@ -88,31 +108,11 @@ flags = 4
 atlas = ExtResource( 2 )
 region = Rect2( 147, 0, 21, 39 )
 
-[sub_resource type="AtlasTexture" id=18]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 0, 39, 21, 39 )
-
-[sub_resource type="AtlasTexture" id=19]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 21, 39, 21, 39 )
-
-[sub_resource type="AtlasTexture" id=20]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 42, 39, 21, 39 )
-
-[sub_resource type="AtlasTexture" id=21]
-flags = 4
-atlas = ExtResource( 2 )
-region = Rect2( 63, 39, 21, 39 )
-
 [sub_resource type="SpriteFrames" id=22]
 animations = [ {
-"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
 "loop": true,
-"name": "Left",
+"name": "Right",
 "speed": 5.0
 }, {
 "frames": [ SubResource( 5 ), SubResource( 6 ), SubResource( 7 ), SubResource( 8 ), SubResource( 9 ) ],
@@ -120,14 +120,14 @@ animations = [ {
 "name": "Up",
 "speed": 5.0
 }, {
+"frames": [ SubResource( 1 ), SubResource( 2 ), SubResource( 3 ), SubResource( 4 ) ],
+"loop": true,
+"name": "Left",
+"speed": 5.0
+}, {
 "frames": [ SubResource( 10 ), SubResource( 11 ), SubResource( 12 ), SubResource( 13 ), SubResource( 14 ), SubResource( 15 ), SubResource( 16 ), SubResource( 17 ) ],
 "loop": true,
 "name": "Down",
-"speed": 5.0
-}, {
-"frames": [ SubResource( 18 ), SubResource( 19 ), SubResource( 20 ), SubResource( 21 ) ],
-"loop": true,
-"name": "Right",
 "speed": 5.0
 } ]
 
@@ -141,7 +141,6 @@ script = ExtResource( 1 )
 scale = Vector2( 3, 3 )
 frames = SubResource( 22 )
 animation = "Down"
-frame = 7
 playing = true
 
 [node name="PlayerCollision" type="CollisionShape2D" parent="."]
