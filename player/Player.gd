@@ -2,6 +2,12 @@ extends KinematicBody2D
 # comment
 export (int) var speed = 200
 
+export var ACCELERATION = 500
+export var MAX_SPEED = 80
+export var ROLL_SPEED  = 120
+export var FRICTION = 500
+
+
 var velocity = Vector2()
 
 func get_input():
@@ -20,12 +26,12 @@ func _physics_process(delta):
 	get_input()
 	velocity = move_and_slide(velocity)
 	if velocity.x > 0:
-		$PlayerSprite.animation = "Right"
+		$PlayerSprite.animation = "Right2"
 	elif velocity.x < 0:
-		$PlayerSprite.animation = "Left"
+		$PlayerSprite.animation = "Left2"
 	elif velocity.y > 0:
-		$PlayerSprite.animation = "Down"
+		$PlayerSprite.animation = "Down2"
 	elif velocity.y < 0:
-		$PlayerSprite.animation = "Up"
+		$PlayerSprite.animation = "Up2"
 	else:
-		$PlayerSprite.animation = "Iddle"
+		$PlayerSprite.animation = "GIRANDO"
